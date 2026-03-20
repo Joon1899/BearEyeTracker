@@ -1,6 +1,6 @@
 import type { BearEyeBrowProps } from "./types.ts";
 
-export const BearEyebrow = ({ size, top, left, right, color = "#374151" }: BearEyeBrowProps) => (
+export const BearEyebrow = ({ size, top, left, color = "#374151" }: BearEyeBrowProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 43 22"
@@ -8,7 +8,6 @@ export const BearEyebrow = ({ size, top, left, right, color = "#374151" }: BearE
       width: size,
       top,
       left,
-      right,
       position: 'absolute',
     }}
   >
