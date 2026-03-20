@@ -2,33 +2,35 @@ import SnowBearNoEyes from "./icons/SnowBearNoEyes";
 import Sunglasses from "./assets/images/sunglasses.png";
 import type { BearEyeTrackerProps } from "./src/types/types";
 import { BearEye } from "./src/components/BearEye";
-import { BearEyebrow } from "./src/components/BearEyebrow"; 
+import { BearEyebrow } from "./src/components/BearEyebrow";
 import { useInputFocus } from "./src/hooks/useInputFocus";
 import { usePupilTracker } from "./src/hooks/usePupilTracker";
 import { calculateBearLayout } from "./src/utils/calculateBearLayout ";
 
 
 export const BearEyeTracker = ({
-    inputRefs, 
+    inputRefs,
     inputValues,
     passwordRef,
     isPasswordHidden = false,
     hasError = false,
     size = 176,
-    colors, 
-}: BearEyeTrackerProps) => {  
-  
-    const { activeInput, isPasswordFocused } = useInputFocus(inputRefs, passwordRef); 
-    const { bearRef, pupilOffset } = usePupilTracker(activeInput, inputValues, size); 
-    const layout = calculateBearLayout(size); 
+    colors,
+    className,
+    style,
+}: BearEyeTrackerProps) => {
+
+    const { activeInput, isPasswordFocused } = useInputFocus(inputRefs, passwordRef);
+    const { bearRef, pupilOffset } = usePupilTracker(activeInput, inputValues, size);
+    const layout = calculateBearLayout(size);
 
     const isFocused = activeInput !== null;
-   
+
     const showSunglasses = isPasswordHidden && isPasswordFocused;
     const showEyebrows = !showSunglasses && hasError;
     const showEyes = !hasError;
 
-    
+
 
     const pupilStyle = isFocused
         ? { transform: `translate(${pupilOffset.x}px, ${pupilOffset.y}px)`, transition: 'transform 0.1s ease-out' }
@@ -36,11 +38,13 @@ export const BearEyeTracker = ({
 
     return (
         <div
+            className={className}
             style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                ...style,
             }}
         >
             <div
@@ -50,9 +54,9 @@ export const BearEyeTracker = ({
                     width: size,
                     height: size,
                     borderRadius: '50%',
-                    backgroundColor: '#dde8f0',
+                    backgroundColor: colors?.background ?? '#dde8f0',
                     marginBottom: '1.5rem',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                    boxShadow: colors?.shadow ?? '0 8px 32px rgba(0,0,0,0.35)',
                     overflow: 'hidden',
                 }}
             >
@@ -76,6 +80,9 @@ export const BearEyeTracker = ({
                             eyeSize={layout.eyeSize}
                             pupilSize={layout.pupilSize}
                             pupilStyle={pupilStyle}
+                            borderColor={colors?.eye?.border}
+                            scleraColor={colors?.eye?.sclera}
+                            pupilColor={colors?.eye?.pupil}
                         />
                     </>
                 )}
