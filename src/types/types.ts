@@ -1,4 +1,6 @@
 interface BearColors {
+    background?: string;
+    shadow?: string;
     body?: string;
     line?: string;
     eye?: {
@@ -17,4 +19,6 @@ export interface BearEyeTrackerProps {
     hasError: boolean;
     size: number;
     colors?: BearColors;
+    className?: string;
+    style?: React.CSSProperties;
 }
