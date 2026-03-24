@@ -15,9 +15,9 @@ export interface BearEyeTrackerProps {
     inputRefs: React.RefObject<HTMLInputElement | null>[];
     inputValues: string[];
     passwordRef?: React.RefObject<HTMLInputElement | null>;
-    isPasswordHidden: boolean;
-    hasError: boolean;
-    size: number;
+    isPasswordHidden?: boolean;
+    hasError?: boolean;
+    size?: number;
     colors?: BearColors;
     className?: string;
     style?: React.CSSProperties;

@@ -19,9 +19,10 @@ export const usePupilTracker = (
             const bearCenterY = bearRect.top + bearRect.height / 2;
     
             const inputRect = activeInput.getBoundingClientRect();
-            const charWidth = 8.5;
+            const fontSize = parseFloat(getComputedStyle(activeInput).fontSize);
+            const charWidth = fontSize * RATIO.charWidth; 
             const currentValue = activeInput.value;
-    
+            
             const targetX = inputRect.left + Math.min(currentValue.length * charWidth, inputRect.width - 16) + 8;
             const targetY = inputRect.top + inputRect.height / 2;
     

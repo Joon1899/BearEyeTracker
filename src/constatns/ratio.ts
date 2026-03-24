@@ -1,4 +1,6 @@
 export const RATIO = {
+    charWidth: 0.5, 
+
     eyeSize: 0.068,
     pupilSize: 0.034,
     maxPupilOffset: 0.014,

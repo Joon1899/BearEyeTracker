@@ -12,7 +12,7 @@ export const BearEyeTracker = ({
     inputRefs,
     inputValues,
     passwordRef,
-    isPasswordHidden = false,
+    isPasswordHidden = true,
     hasError = false,
     size = 176,
     colors,
