@@ -9,7 +9,7 @@ import { calculateBearLayout } from "./utils/calculateBearLayout ";
 import { useLayoutEffect, useState } from "react";
 
 
-export const BearEyeTracker = ({
+const BearEyeTracker = ({
     inputRefs,
     inputValues,
     passwordRef,
@@ -146,3 +146,4 @@ export const BearEyeTracker = ({
         </div>
     );
 }
+export default BearEyeTracker; 

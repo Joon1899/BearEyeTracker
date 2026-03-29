@@ -1,1 +1,1 @@
-export { BearEyeTracker } from './src/BearEyeTracker.tsx'
+export { default as BearEyeTracker } from './src/BearEyeTracker'
