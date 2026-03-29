@@ -82,7 +82,6 @@ import { BearEyeTracker } from "bear-eye-tracker"
   passwordRef={passwordRef}
   isPasswordHidden={true}
   hasError={false}
-  size={176}
   colors={{
     background: '#dde8f0',
     shadow: '0 8px 32px rgba(0,0,0,0.35)',
@@ -112,11 +111,10 @@ import { BearEyeTracker } from "bear-eye-tracker"
 | passwordRef? | `React.RefObject<HTMLInputElement>` | - | Ref for the password input element |
 | isPasswordHidden? | `boolean` | `true` | Whether to show sunglasses when password input is focused |
 | hasError? | `boolean` | `false` | Whether to show eyebrows when an error occurs |
-| size? | `number` | `176` | Size of the component (px) |
 | colors? | `BearColors` | - | Color customization options |
 | className? | `string` | - | CSS class applied to the outer wrapper |
 | style? | `React.CSSProperties` | - | Inline style applied to the outer wrapper |
-> 💡 For responsive layouts (e.g. `vw`, `%`), use `className` or `style` instead of the `size` prop.
+
 
 ### BearColors
 
@@ -310,7 +308,6 @@ const CustomTheme = () => {
             <BearEyeTracker
                 inputRefs={[inputRef]}
                 inputValues={[inputValue]}
-                size={176}
                 colors={{
                     background: '#e2eaf2',
                     shadow: '0 8px 32px rgba(100,130,160,0.2)',
