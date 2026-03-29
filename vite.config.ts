@@ -10,11 +10,11 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'index.ts',
-            formats: ['es'],
+            formats: ['es','cjs'],
             fileName: 'index',
         },
         rollupOptions: {
-            external: ['react', 'react-dom'], 
+            external: ['react', 'react-dom', 'react/jsx-runtime'], 
         }
     }
 });

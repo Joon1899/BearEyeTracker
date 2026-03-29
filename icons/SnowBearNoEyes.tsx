@@ -2,13 +2,13 @@ import * as React from "react";
 
 export interface SnowBearNoEyesProps
   extends React.SVGProps<SVGSVGElement> {
-  size?: number;
+  size?: number | null;
   bodyColor?: string;
   lineColor?: string;
 }
 
 function SnowBearNoEyes({
-  size = 256,
+  size,
   bodyColor = "#e5e7eb",
   lineColor = "currentColor",
   ...props
@@ -16,8 +16,8 @@ function SnowBearNoEyes({
   return (
     <svg
       viewBox="0 0 1536 1024"
-      width={size}
-      height={size}
+      width={size ?? '100%'}
+      height={size ?? '100%'}
       preserveAspectRatio="xMidYMid meet"
       {...props}
     >

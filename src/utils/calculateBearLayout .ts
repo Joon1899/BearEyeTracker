@@ -1,6 +1,21 @@
 import { RATIO } from "../constatns/ratio";
 
-export const calculateBearLayout = (size: number) => {
+export const calculateBearLayout = (size: number | null) => {
+    if(size === null) return{
+        eyeSize: 0,
+        pupilSize: 0,
+        eyeTop: 0,
+        leftEyeX: 0,
+        rightEyeX: 0,
+        sunglassesWidth: 0,
+        sunglassesTop: 0,
+        sunglassesLeft: 0,
+        eyebrowWidth: 0,
+        eyebrowTop: 0,
+        leftEyebrowLeft: 0,
+        rightEyebrowLeft: 0,
+    }
+
 
     const eyeSize = size * RATIO.eyeSize;
 

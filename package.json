@@ -2,7 +2,11 @@
   "name": "bear-eye-tracker",
   "version": "1.0.0",
   "description": "A React bear avatar component that tracks eye movement and reacts to form input focus",
-  "main": "index.js",
+  "files": ["dist"],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts", 
+
   "directories": {
     "test": "tests"
   },
@@ -18,5 +22,13 @@
     "typescript": "^5.9.3",
     "vite": "^8.0.1",
     "vite-plugin-dts": "^4.5.4"
+  }, 
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
   }
 }
