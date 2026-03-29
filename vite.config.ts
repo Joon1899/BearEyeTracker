@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
     plugins: [
         react(),
-        dts({ include: ['BearEyeTracker.tsx', 'src'] })
+         dts()
     ],
     build: {
         lib: {
