@@ -7,28 +7,29 @@ const PasswordInteractionExample = () => {
     const [password, setPassword] = useState('');
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
-
     return (
-
-        <div className="flex flex-col items-center justify-center min-h-screen bg-[#dde8f0]">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-[#dde8f0] px-4">
             <BearEyeTracker
                 inputRefs={[passwordRef]}
                 inputValues={[password]}
                 passwordRef={passwordRef}
                 isPasswordHidden={isPasswordHidden}
+                className="sm:w-48 md:w-64"
             />
-            <div className="relative w-64">
+            <div className="relative w-full max-w-xs sm:max-w-sm">
                 <input
                     ref={passwordRef}
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 placeholder:text-slate-300 outline-none transition-all duration-200 focus:border-[#94b8d0] focus:shadow-[0_0_0_4px_rgba(148,184,208,0.15)]"
-                >
-                </input>
+                    className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 placeholder:text-slate-300 outline-none transition-all duration-200 focus:border-[#94b8d0] focus:shadow-[0_0_0_4px_rgba(148,184,208,0.15)] pr-10"
+                />
                 <button
                     type="button"
-                    onClick={() => setIsPasswordHidden(prev => !prev)}
+                    onClick={() => { 
+                        passwordRef.current?.focus(); 
+                        setIsPasswordHidden(prev => !prev);
+                    }}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors p-1"
                     tabIndex={1}
                 >
@@ -46,11 +47,8 @@ const PasswordInteractionExample = () => {
                     )}
                 </button>
             </div>
-
         </div>
-    )
-
-
+    );
 };
 
-export default PasswordInteractionExample; 
+export default PasswordInteractionExample;
