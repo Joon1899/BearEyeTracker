@@ -161,7 +161,8 @@ import { BearEyeTracker } from "bear-eye-tracker"
 When an input is focused, the bear's eyes follow the cursor.  
 As you type, the pupils track the end of the input value.
 
-> ⚠️ For accurate tracking, place the input and the bear horizontally aligned.
+> ⚠️ For accurate tracking, place the input and the bear horizontally aligned. 
+> ⚠️ Please do not set both width and height values at the same time. The defined aspect ratio may be distorted.
 
 ```jsx
 import { BearEyeTracker } from "bear-eye-tracker";
