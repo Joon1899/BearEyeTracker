@@ -1,6 +1,7 @@
 {
   "name": "bear-eye-tracker",
   "version": "1.0.0",
+  "type": "module",
   "description": "A React bear avatar component that tracks eye movement and reacts to form input focus",
   "files": ["dist"],
   "main": "dist/index.cjs",
