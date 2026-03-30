@@ -63,6 +63,30 @@ yarn install bear-eye-tracker
 
 ## Peer Dependencies
 
+This package requires the following peer dependencies:
+
+| Package | Version |
+|---------|---------|
+| react | ^18 || ^19 |
+| react-dom | ^18 || ^19 |
+
+Install them if you haven't already:
+
+**npm**
+```bash
+npm install react react-dom
+```
+
+**pnpm**
+```bash
+pnpm install react react-dom
+```
+
+**yarn**
+```bash
+yarn add react react-dom
+```
+
 ## Usage
 ```jsx
 import { BearEyeTracker } from "bear-eye-tracker"  
