@@ -1,4 +1,4 @@
-import { RATIO } from "../constatns/ratio";
+import { RATIO } from "../constants/ratio";
 
 export const calculateBearLayout = (size: number | null) => {
     if(size === null) return{

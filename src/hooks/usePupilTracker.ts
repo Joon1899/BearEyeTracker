@@ -86,7 +86,7 @@
 // }; 
 
 import { useEffect, useRef, useState } from "react";
-import { RATIO } from "../constatns/ratio";
+import { RATIO } from "../constants/ratio";
 
 export const usePupilTracker = (
     activeInput: HTMLInputElement | null,
