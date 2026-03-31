@@ -3,8 +3,8 @@ export interface BearEyeProps {
     left: number;
     eyeSize: number;
     pupilSize: number;
-    pupilStyle?: React.CSSProperties;
-    borderColor?: string;
-    scleraColor?: string;
-    pupilColor?: string;
+    pupilStyle?: React.CSSProperties | undefined;
+    borderColor?: string | undefined;
+    scleraColor?: string | undefined;
+    pupilColor?: string | undefined;
 }

@@ -1,18 +1,11 @@
-import * as React from "react";
+import type { SnowBearNoEyesProps } from "./types";
 
-export interface SnowBearNoEyesProps
-  extends React.SVGProps<SVGSVGElement> {
-  size?: number | null;
-  bodyColor?: string;
-  lineColor?: string;
-}
-
-function SnowBearNoEyes({
+export const SnowBearNoEyes = ({
   size,
   bodyColor = "#e5e7eb",
   lineColor = "currentColor",
   ...props
-}: SnowBearNoEyesProps) {
+}: SnowBearNoEyesProps) => {
   return (
     <svg
       viewBox="0 0 1536 1024"
@@ -50,4 +43,3 @@ function SnowBearNoEyes({
   );
 }
 
-export default SnowBearNoEyes;

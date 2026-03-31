@@ -1,11 +1,11 @@
-import SnowBearNoEyes from "./icons/SnowBearNoEyes";
+import { SnowBearNoEyes } from "./components/SnowBearNoEyes";
 import Sunglasses from "../assets/images/sunglasses.png";
 import type { BearEyeTrackerProps } from "./types/types";
 import { BearEye } from "./components/BearEye";
 import { BearEyebrow } from "./components/BearEyebrow";
 import { useInputFocus } from "./hooks/useInputFocus";
 import { usePupilTracker } from "./hooks/usePupilTracker";
-import { calculateBearLayout } from "./utils/calculateBearLayout ";
+import { calculateBearLayout } from "./utils/calculateBearLayout";
 import { useLayoutEffect, useState } from "react";
 
 
@@ -29,7 +29,6 @@ const BearEyeTracker = ({
     const el = bearRef.current;
     if (!el) return;
 
-    // 마운트 직후 동기적으로 크기 읽기 → 깜빡임 없음
     setResolvedSize(el.getBoundingClientRect().width);
 
     if (typeof ResizeObserver === 'undefined') return;
@@ -37,6 +36,7 @@ const BearEyeTracker = ({
     // SSR 경우 return 하도록(useLayoutEffect)
 
     const observer = new ResizeObserver(([entry]) => {
+        if(!entry) return; 
         setResolvedSize(entry.contentRect.width);
     }); 
 

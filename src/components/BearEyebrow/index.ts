@@ -1,2 +1,2 @@
-export { BearEyebrow } from './BearEyebrow.tsx';
+export { BearEyebrow } from './BearEyebrow';
 export type { BearEyeBrowProps } from './types.ts';  
