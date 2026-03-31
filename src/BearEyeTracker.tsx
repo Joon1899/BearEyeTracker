@@ -1,4 +1,4 @@
-import SnowBearNoEyes from "../icons/SnowBearNoEyes";
+import SnowBearNoEyes from "./icons/SnowBearNoEyes";
 import Sunglasses from "../assets/images/sunglasses.png";
 import type { BearEyeTrackerProps } from "./types/types";
 import { BearEye } from "./components/BearEye";
