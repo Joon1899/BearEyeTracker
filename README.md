@@ -1,6 +1,8 @@
 # BearEyeTracker
 A React bear avatar component that tracks eye movement and reacts to form input focus
 
+![화면 기록 2026-03-31 오후 8 21 16](https://github.com/user-attachments/assets/6ae0d8ea-d60e-4c9a-969a-fa9c1448e0b8)
+
 
 ## Quick Start
 > No styling dependencies. </br>
