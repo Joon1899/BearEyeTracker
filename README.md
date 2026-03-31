@@ -56,7 +56,7 @@ npm install bear-eye-tracker
 ``` bash
 pnpm install bear-eye-tracker
 ```
-**npm**
+**yarn**
 ``` bash
 yarn install bear-eye-tracker
 ```
