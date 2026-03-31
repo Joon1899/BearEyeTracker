@@ -1,4 +1,4 @@
-interface BearColors {
+export interface BearColors {
     background?: string;
     shadow?: string;
     body?: string;
