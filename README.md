@@ -52,15 +52,15 @@ export default BearEyeTrackerDemo;
 
 **npm**
 ``` bash
-npm install bear-eye-tracker
+npm install https://github.com/Joon1899/BearEyeTracker.git
 ```
 **pnpm**
 ``` bash
-pnpm install bear-eye-tracker
+pnpm install https://github.com/Joon1899/BearEyeTracker.git
 ```
 **yarn**
 ``` bash
-yarn install bear-eye-tracker
+yarn add https://github.com/Joon1899/BearEyeTracker.git
 ```
 
 ## Peer Dependencies
