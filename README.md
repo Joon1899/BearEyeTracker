@@ -34,6 +34,7 @@ const BearEyeTrackerDemo = () => {
             <input
                 ref={passwordRef}
                 placeholder="Password"
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
@@ -58,7 +59,7 @@ pnpm install bear-eye-tracker
 ```
 **yarn**
 ``` bash
-yarn install bear-eye-tracker
+yarn add bear-eye-tracker
 ```
 
 ## Peer Dependencies
