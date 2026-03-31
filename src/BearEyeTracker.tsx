@@ -6,8 +6,9 @@ import { BearEyebrow } from "./components/BearEyebrow";
 import { useInputFocus } from "./hooks/useInputFocus";
 import { usePupilTracker } from "./hooks/usePupilTracker";
 import { calculateBearLayout } from "./utils/calculateBearLayout";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect; 
 
 const BearEyeTracker = ({
     inputRefs,
@@ -25,15 +26,14 @@ const BearEyeTracker = ({
     const { bearRef, pupilOffset } = usePupilTracker(activeInput, inputValues);
     const layout = calculateBearLayout(resolvedSize);
 
-    useLayoutEffect(() => {
+    
+    useIsomorphicLayoutEffect(() => {
     const el = bearRef.current;
     if (!el) return;
 
     setResolvedSize(el.getBoundingClientRect().width);
 
     if (typeof ResizeObserver === 'undefined') return;
-    
-    // SSR 경우 return 하도록(useLayoutEffect)
 
     const observer = new ResizeObserver(([entry]) => {
         if(!entry) return; 
