@@ -98,6 +98,7 @@ import { BearEyeTracker } from "bear-eye-tracker"
   inputValues={[email, password]}
 />
 ```
+> The bear fills its parent container (`width: 100%`). Set a width via `className` or `style` as needed.
 ### Full
 ```jsx
 <BearEyeTracker
