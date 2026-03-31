@@ -36,7 +36,7 @@ export const useInputFocus = (
                 el.removeEventListener('blur', onBlur);
             });
         };
-    }, [inputRefs, passwordRef]);
+    }, [inputRefs.length, ...inputRefs.map(r => r.current), passwordRef]);
     
     return { activeInput, isPasswordFocused }; 
 
